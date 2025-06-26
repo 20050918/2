@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数学几何探险家</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Arial Rounded MT Bold', 'Microsoft YaHei', sans-serif;
+            background-color: #f5f9ff;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .grade-selector {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 15px;
+            background-color: #e3f2fd;
+            position: fixed;
+            width: 100%;
+            top: 100px;
+            z-index: 99;
+        }
+        
+        .grade-btn {
+            margin: 5px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: #4a6baf;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .grade-btn:hover {
+            background-color: #3a56a0;
+            transform: scale(1.05);
+        }
+        
+        .content-area {
+            padding: 180px 20px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .guide-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .guide-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .guide-image {
+            width: 100%;
+            height: auto; /* 改为auto以保持图片原始比例 */
+            max-height: 200px; /* 限制最大高度 */
+            object-fit: contain; /* 改为contain以完整显示图片 */
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .grade-title {
+            color: #2575fc;
+            margin-top: 0;
+            border-bottom: 2px solid #e3f2fd;
+            padding-bottom: 10px;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #6a11cb;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .back-btn:hover {
+            background-color: #4a0ba3;
+        }
+
+        .welcome-message {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .content-area {
+                padding-top: 160px;
+            }
+            
+            .grade-selector {
+                top: 80px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>数学几何探险家</h1>
+        <p>探索几何世界的奇妙旅程，从一年级到六年级！(人教版教材)</p>
+    </header>
+    
+    <div class="grade-selector">
+        <a href="grade1.html" class="grade-btn">一年级探险</a>
+        <a href="grade2.html" class="grade-btn">二年级探险</a>
+        <a href="grade3.html" class="grade-btn">三年级探险</a>
+        <a href="grade4.html" class="grade-btn">四年级探险</a>
+        <a href="grade5.html" class="grade-btn">五年级探险</a>
+        <a href="grade6.html" class="grade-btn">六年级探险</a>
+    </div>
+    
+    <!-- 首页内容 -->
+    <div class="content-area">
+            <h2>欢迎来到数学几何探险家！</h2>
+            <p>请选择您的年级开始探险之旅，每个年级都有独特的几何知识和有趣的互动活动！</p>
+        
+        <div class="guide-container">
+            <!-- 一年级卡片 -->
+            <a href="grade1.html" class="guide-card">
+                <img src="images/grade1-preview.png" alt="一年级预览" class="guide-image">
+                <h3>一年级：认识图形</h3>
+                <p>认识长方形、正方形、三角形、圆和平行四边形等基本平面图形。</p>
+            </a>
+            
+            <!-- 二年级卡片 -->
+            <a href="grade2.html" class="guide-card">
+                <img src="images/grade2-preview.png" alt="二年级预览" class="guide-image">
+                <h3>二年级：角度与对称</h3>
+                <p>学习直角、锐角、钝角，探索轴对称、平移和旋转现象。</p>
+            </a>
+            
+            <!-- 三年级卡片 -->
+            <a href="grade3.html" class="guide-card">
+                <img src="images/grade3-preview.png" alt="三年级预览" class="guide-image">
+                <h3>三年级：周长与面积</h3>
+                <p>了解四边形特征，学习周长和面积的计算方法。</p>
+            </a>
+            
+            <!-- 四年级卡片 -->
+            <a href="grade4.html" class="guide-card">
+                <img src="images/grade4-preview.png" alt="四年级预览" class="guide-image">
+                <h3>四年级：线与角</h3>
+                <p>深入研究线段、直线、射线和各种角度的分类与测量。</p>
+            </a>
+            
+            <!-- 五年级卡片 -->
+            <a href="grade5.html" class="guide-card">
+                <img src="images/grade5-preview.png" alt="五年级预览" class="guide-image">
+                <h3>五年级：多边形面积</h3>
+                <p>探索平行四边形、三角形、梯形和组合图形的面积计算。</p>
+            </a>
+            
+            <!-- 六年级卡片 -->
+            <a href="grade6.html" class="guide-card">
+                <img src="images/grade6-preview.png" alt="六年级预览" class="guide-image">
+                <h3>六年级：圆与坐标</h3>
+                <p>学习圆的特征、周长和面积计算，以及用方向和距离描述位置。</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
